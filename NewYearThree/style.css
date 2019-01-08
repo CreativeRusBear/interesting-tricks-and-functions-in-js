@@ -1,0 +1,7 @@
+body{
+    margin: 50px auto;
+}
+#tree{
+    font-family: monospace;
+    text-align: center;
+}

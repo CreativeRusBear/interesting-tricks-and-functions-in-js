@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10 tricks in console</title>
+</head>
+<body>
+<script>
+    //очистка консоли
+    console.clear();
+
+
+    console.log('Сейчас начнется создание 1ой группы');
+    console.group('Первая группа');
+    console.log('Что-то в первой группе');
+    console.groupEnd('Закрываем первую группу');
+    
+    
+    function foo() {
+        function bar() {
+            console.trace();
+        }
+        bar()
+    }
+
+    foo();
+
+    //счетчик
+    console.count('Counter');
+    console.count('Counter');
+    //сброс значения счетчика
+    console.countReset('Counter');
+    console.count('Counter');
+
+
+
+    //таймер
+    console.time();
+    console.timeEnd();
+
+    console.time('timer');
+    console.timeEnd('timer');
+
+    //Помимо замера времени можно профилировать Ваш код и вывести стек профилирования, который подробно показывает, где и сколько времени потратил браузер.
+    function thisNeedToBeProfiled() {
+        console.profile("thisNeedToBeProfiled()");
+        console.profileEnd();
+    }
+    thisNeedToBeProfiled();
+
+    //проверка условия
+    function greaterThan(a,b) {
+        console.assert(a > b, {"message":"a is not greater than b","a":a,"b":b});
+    }
+    //не выведет сообщение, так как результат true
+    greaterThan(2,1);
+    //выведет сообщение
+    greaterThan(1,2);
+
+
+    //ифнормация о памяти
+    //console.memory;
+
+
+    //таблица в консоли
+    const users=[{
+        name: 'Billy',
+        age: 15
+    },
+        {
+            name: 'Ann',
+            age: 25
+        }];
+    console.table(users);
+</script>
+</body>
+</html>

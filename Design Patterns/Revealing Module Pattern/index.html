@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Revealing Module Pattern</title>
+</head>
+<body>
+<script>
+    const myRevealingModule = (function () {
+        let privateVar = 'John';
+        const publicVar = 'Hello World!';
+
+        function privateFunction() {
+            console.log('Name: ' + privateVar);
+        }
+
+        function publicSetName(name) {
+            privateVar = name;
+        }
+
+        function publicGetName() {
+            privateFunction();
+        }
+
+        return{
+            setName: publicSetName,
+            greeting: publicVar,
+            getName: publicGetName
+        };
+    })();
+
+    myRevealingModule.setName('Mark');
+    myRevealingModule.getName();
+</script>
+</body>
+</html>
