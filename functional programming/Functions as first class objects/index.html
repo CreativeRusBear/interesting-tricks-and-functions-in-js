@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Функции как объекты первого класса</title>
+</head>
+<body>
+<script>
+    function sum(a,b) {
+        return a+b;
+    }
+    function subtraction(a,b) {
+        return a-b;
+    }
+    function doubleOperator(f,a,b) {
+        return f(a,b)*2;
+    }
+
+    console.log(doubleOperator(sum,5,5));
+    console.log(doubleOperator(subtraction,15,3));
+</script>
+</body>
+</html>

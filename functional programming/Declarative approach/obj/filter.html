@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let people=[
+        {name: "Andrew", age:25},
+        {name: "Ann", age:15},
+        {name: "Liza", age:35}
+    ];
+
+    function olderThen21(person) {
+        return person.age>21;
+    }
+
+    function overAge(people) {
+        return people.filter(olderThen21);
+    }
+
+    console.log(overAge(people));
+</script>
+</body>
+</html>
