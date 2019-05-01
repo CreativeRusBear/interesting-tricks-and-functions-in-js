@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The length of the cache in cycles</title>
+</head>
+<body>
+    <p>Когда вы изучаеете for для циклов, то следуете стандартной процедуре.</p>
+    <p>Тем не менее, при таком синтаксисе цикл for повторно проверяет длину массива при каждой итерации.</p>
+    <p>Иногда это может быть полезно, но в большинстве случаев эффективнее кэшировать длину массива, что потребует одного обращения к нему. Мы можем сделать это путем определения переменной длины, где задать переменную i.</p>
+    <script>
+        const arr=[1,2,3,5,5];
+       for (let i=0, length=arr.length; i<length;i++){
+           console.log(i);
+       }
+    </script>
+</body>
+</html>
